@@ -2,15 +2,15 @@
 # but valid SQL. 
 
 Table: users						Table:statuses
-0|id|INTEGER|1||1 ->user_id	  		0|id|INTEGER|1||1		 ->status_id
+0|id|INTEGER|1||1 ->user_id	  		0|id|INTEGER|1||	 ->status_id
 1|name|varchar(255)|0||0			1|user_id|integer|0||0
 2|created_at|datetime|1||0			2|status|text|0||0
 3|updated_at|datetime|1||0			3|geocode|varchar(255)|0||0
-									4|created_at|datetime|1||0
-									5|updated_at|datetime|1||0
+						4|created_at|datetime|1||0
+						5|updated_at|datetime|1||0
 			
-Table: tags							Table:statuses_tags
-0|id|INTEGER|1||1					0|id|INTEGER|1||1
+Table: tags					Table:statuses_tags
+0|id|INTEGER|1||1				0|id|INTEGER|1||1
 1|tag|varchar(255)|0||0				1|status_id|integer|0||0
 2|created_at|datetime|1||0			2|tag_id|integer|0||0	->tags.id
 3|updated_at|datetime|1||0
