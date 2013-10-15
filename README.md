@@ -9,22 +9,22 @@ The goal of this lab is to familiarize yourself with SQL statements. Please make
 Follow set up below. As before, you should fork this repo, and submit your work as a pull request against the master branch of this repo.
 
 ## Setup
-Set up your machine to use a new RVM gem set:
- 
-When ruby has finished building, checkout out the SQLite file from git hub:
-$ git clone git@github.com:CUNY-TAP/fun-with-sql.git
 
-Change to the directory:
+* Checkout out the SQLite file from git hub:
+
+	$ git clone git@github.com:CUNY-TAP/fun-with-sql.git
+
+* Change to the directory:
 	$ cd fun-with-sql
 
-Create an RVM gemset (and use it):
+* Create an RVM gemset (and use it):
 	$ rvm use ruby-2.0.0@funwithsql --create
 
-Install the SQLite3 gem:
+* Install the SQLite3 gem:
 	$ gem install sqlite3
  
-Run the sqlite3 console:
-	$ sqlite3 tweet_db
+* Run the sqlite3 console:
+	$ sqlite3 tweet_db.sqlite3
 
 You are now in the SQL lite console. 
 
@@ -57,4 +57,4 @@ Will find only the rows whose name column EXACLY matches “STEVE JOBS”.
 If you get stuck, google around, and make sure to checkout the SQLite command reference. http://www.sqlite.org/lang.html
 
 ## Questions
-Look in the questions.sql file to create the actual SQL statements
+Look in the questions.sql file to create the actual SQL statements. Make sure to edit the questions.sql, and submit that as a pull request against the master repo. 
