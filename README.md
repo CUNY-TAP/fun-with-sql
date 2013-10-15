@@ -10,20 +10,24 @@ Follow set up below. As before, you should fork this repo, and submit your work 
 
 ## Setup
 
-* Checkout out the SQLite file from git hub:
+Checkout out the SQLite file from git hub:
 
 	$ git clone git@github.com:CUNY-TAP/fun-with-sql.git
 
-* Change to the directory:
+Change to the directory:
+	
 	$ cd fun-with-sql
 
-* Create an RVM gemset (and use it):
+Create an RVM gemset (and use it):
+
 	$ rvm use ruby-2.0.0@funwithsql --create
 
-* Install the SQLite3 gem:
+Install the SQLite3 gem:
+	
 	$ gem install sqlite3
  
-* Run the sqlite3 console:
+Run the sqlite3 console:
+	
 	$ sqlite3 tweet_db.sqlite3
 
 You are now in the SQL lite console. 
