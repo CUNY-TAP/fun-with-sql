@@ -1,4 +1,3 @@
-
 # Remember to turn in the SQL queries that return the answers, I am not actually interested in the answers themselves, 
 # but valid SQL. 
 
@@ -78,5 +77,6 @@ LEFT JOIN tags t ON st.tag_id = t.id;
 #See "mostCommon.rb" for code.
 
 #What are some other kinds of queries that are useful? 
-#TRIGGERS, useful for handeling db events such as adding a timestamp when certain event occurs.
+#TRIGGERS, not sure if it counts as a query but 
+#they are useful for handeling db events such as adding a timestamp when certain event occurs.
 
