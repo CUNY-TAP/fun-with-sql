@@ -1,4 +1,3 @@
-
 # Remember to turn in the SQL queries that return the answers, I am not actually interested in the answers themselves, 
 # but valid SQL. 
 
@@ -9,9 +8,9 @@ SELECT name FROM users;
 
 #How many users are there? 
 
-#How many posts by a certain user? 
+#How many statuses by a certain user? 
 
-#Return the user name column, and all the status by that user. 
+#Return the user name column, and all the statuses by that user. 
 
 #Return all users who have at least 1 status that has a geocode. (Hint, you’ll want somewhere your WHERE clause “geocode IS NOT NULL”). 
 
