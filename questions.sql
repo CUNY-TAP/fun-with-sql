@@ -1,4 +1,3 @@
-
 # Remember to turn in the SQL queries that return the answers, I am not actually interested in the answers themselves, 
 # but valid SQL. 
 
@@ -7,14 +6,22 @@ SELECT name FROM users;
 
 #Select all the user names whose name starts with the letter “b”. 
 
+select name from users where name like'b%';
+
 #How many users are there? 
+select count(name) from users;
+
 
 #How many posts by a certain user? 
+ select count(status) from statuses where user_id=277;
+
 
 #Return the user name column, and all the status by that user. 
+select name, status from users u inner join statuses  on u.id=user_id where u.id=277
 
 #Return all users who have at least 1 status that has a geocode. (Hint, you’ll want somewhere your WHERE clause “geocode IS NOT NULL”). 
 
+select  distinct geocode ,user_id from statuses where geocode!='NULL';
 #Return all user names who have written more than one status. 
 
 #Return all user names who have written more than one status with the tag “food.” 
