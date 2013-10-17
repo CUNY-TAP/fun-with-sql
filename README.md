@@ -48,7 +48,7 @@ You can use the LIKE operator in a where clause to look for text patterns. The %
 
 	WHERE name LIKE ‘%ST’
 
-Will find rows whose name column starts with the characters “ST”. 
+Will find rows whose name column ends with the characters “ST”. 
 
 	WHERE name LIKE ‘%ST%’
 
