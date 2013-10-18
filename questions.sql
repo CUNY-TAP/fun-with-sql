@@ -1,4 +1,3 @@
-
 # Remember to turn in the SQL queries that return the answers, I am not actually interested in the answers themselves, 
 # but valid SQL. 
 
@@ -72,6 +71,7 @@ GROUP BY user_id HAVING COUNT(status) = (
 	users JOIN statuses ON users.id = statuses.user_id
 	GROUP BY user_id ORDER BY COUNT(status) DESC LIMIT 1
 );
+#For "most popular tag" and "most popular user" I wanted to account for the fact that you could potentially have multiple tags or users that were most popular. These queries work but they feel pretty clunky. 
 
 #Give me ALL statuses by all users, with their tags, even the ones that don’t necessarily have a tag. 
 SELECT name, status, tag
