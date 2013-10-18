@@ -39,6 +39,9 @@ select status from statuses where created_at=(select max(created_at) from status
 #What is the most popular tag? (Hint, count how many statuses their are by tag). 
 select tag from (select tag_id, count(tag_id) maxtags from statuses_tags group by tag_id order by maxtags desc limit 1 offset 0 )topRow  inner join tags on id=topRow.tag_id;
 
+# or you can use the following one, which is simpler
+select tag from tags inner join statuses_tags on tags.id=tag_id  group by tag_id order by count(tag_id) desc limit 1 offset 0;
+
 
 #What is the most popular user? 
 select name from users inner join  statuses where user_id =users.id group by user_id order by count(user_id) desc  limit 1 offset 0 ;
