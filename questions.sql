@@ -28,9 +28,13 @@ select name from users inner join statuses on user_id=users.id   group by user_i
 
 #Return all user names who have written more than one status with the tag “food.” 
 
+select name from users inner join statuses on user_id=users.id   inner join statuses_tags on statuses.id=status_id inner join tags on tags.id=tag_id where tags.tag='food' group by user_id having count(user_id)>1   ;
+
 #Return user names, their statuses, and their tags in one big join. 
+select name, status, tag from users left join statuses on user_id=users.id   left join statuses_tags on statuses.id=status_id left join tags on tags.id=tag_id  ;
 
 #What is the most recent status? 
+select status from statuses where created_at=(select max(created_at) from statuses);
 
 #What is the most popular tag? (Hint, count how many statuses their are by tag). 
 select tag from (select tag_id, count(tag_id) maxtags from statuses_tags group by tag_id order by maxtags desc limit 1 offset 0 )topRow  inner join tags on id=topRow.tag_id;
