@@ -13,11 +13,13 @@ select count(name) from users;
 
 
 #How many posts by a certain user? 
- select count(status) from statuses where user_id=277;
+ # wrong query --select count(status) from statuses where user_id=277;
+ select name ,count(*) from users left join statuses on user_id=users.id group by users.id;
+
 
 
 #Return the user name column, and all the status by that user. 
-select name, status from users u inner join statuses  on u.id=user_id where u.id=277
+select name ,status from users left join statuses on user_id=users.id group by users.id;
 
 #Return all users who have at least 1 status that has a geocode. (Hint, you’ll want somewhere your WHERE clause “geocode IS NOT NULL”). 
 
