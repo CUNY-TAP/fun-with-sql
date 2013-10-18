@@ -23,6 +23,8 @@ select name, status from users u inner join statuses  on u.id=user_id where u.id
 
 select  distinct geocode ,user_id from statuses where geocode!='NULL';
 #Return all user names who have written more than one status. 
+select name from users inner join statuses on user_id=users.id   group by user_id having count(user_id)>1 order by count(user_id) desc ;
+
 
 #Return all user names who have written more than one status with the tag “food.” 
 
