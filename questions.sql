@@ -31,8 +31,11 @@ select  distinct geocode ,user_id from statuses where geocode!='NULL';
 #What is the most recent status? 
 
 #What is the most popular tag? (Hint, count how many statuses their are by tag). 
+select tag from (select tag_id, count(tag_id) maxtags from statuses_tags group by tag_id order by maxtags desc limit 1 offset 0 )topRow  inner join tags on id=topRow.tag_id;
+
 
 #What is the most popular user? 
+select name from users inner join  statuses where user_id =users.id group by user_id order by count(user_id) desc  limit 1 offset 0 ;
 
 #Give me ALL statuses by all users, with their tags, even the ones that don’t necessarily have a tag. 
 
