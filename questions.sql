@@ -47,9 +47,12 @@ select tag from tags inner join statuses_tags on tags.id=tag_id  group by tag_id
 select name from users inner join  statuses where user_id =users.id group by user_id order by count(user_id) desc  limit 1 offset 0 ;
 
 #Give me ALL statuses by all users, with their tags, even the ones that don’t necessarily have a tag. 
+select status, tag  from  statuses left join statuses_tags on statuses.id=status_id left join tags on tags.id=tag_id;
+
 
 #Extra Credit
 #What is the most popular word? (you may need the help of ruby)
 
 #What are some other kinds of queries that are useful? 
+parameter query, replace query, analyze 
 
