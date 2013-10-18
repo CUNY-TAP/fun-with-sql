@@ -7,7 +7,7 @@ SELECT name FROM users;
 #Select all the user names whose name starts with the letter “b”. 
 SELECT * 
 FROM users 
-WHERE name like '%b';
+WHERE name like 'b%';
 
 #How many users are there? 
 SELECT COUNT(*) FROM users;
