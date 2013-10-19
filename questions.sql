@@ -4,9 +4,11 @@
 # Select all the user names from the users table. 
 SELECT name FROM users;
 
-#Select all the user names whose name starts with the letter “b”. 
+#Select all the user names whose name starts with the letter “b”.
+SELECT name FROM users WHERE name LIKE 'b%'; 
 
 #How many users are there? 
+SELECT COUNT(*) FROM users;
 
 #How many statuses by a certain user? 
 SELECT COUNT(*) FROM users INNER JOIN statuses ON users.id=statuses.user_id WHERE name='USER_NAME';
