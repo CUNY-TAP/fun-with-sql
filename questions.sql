@@ -9,8 +9,10 @@ SELECT name FROM users;
 #How many users are there? 
 
 #How many statuses by a certain user? 
+SELECT COUNT(*) FROM users INNER JOIN statuses ON users.id=statuses.user_id WHERE name='USER_NAME';
 
 #Return the user name column, and all the statuses by that user. 
+SELECT users.name , statuses.status FROM users INNER JOIN statuses ON users.id=statuses.user_id WHERE name='USER_NAME';
 
 #Return all users who have at least 1 status that has a geocode. (Hint, you’ll want somewhere your WHERE clause “geocode IS NOT NULL”). 
 
