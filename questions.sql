@@ -5,6 +5,7 @@
 SELECT name FROM users;
 
 #Select all the user names whose name starts with the letter “b”. 
+##########################################################################################
 
 #How many users are there? 
 
