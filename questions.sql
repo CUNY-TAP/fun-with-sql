@@ -85,14 +85,34 @@ INNER JOIN tags ON statuses_tags.tag_id = tags.id;
 SELECT status , MAX( created_at ) FROM statuses; 
 
 ##########################################################################################
+
 #What is the most popular tag? (Hint, count how many statuses their are by tag). 
+
+SELECT DISTINCT tag , COUNT(status)
+FROM tags INNER JOIN statuses_tags ON tags.id = statuses_tags.tag_id
+INNER JOIN statuses ON statuses.id = statuses_tags.status_id
+GROUP BY tag DESC;
+
 ##########################################################################################
+
 #What is the most popular user? 
+
 ##########################################################################################
+
 #Give me ALL statuses by all users, with their tags, even the ones that don’t necessarily have a tag. 
+
+SELECT name, status, tag 
+FROM users FULL JOIN statuses ON users.id = statuses.user_id 
+FULL JOIN statuses_tags ON statuses.id = statuses_tags.status_id
+FULL JOIN tags ON statuses_tags.tag_id = tags.id;   
+
 ##########################################################################################
+
 #Extra Credit
 #What is the most popular word? (you may need the help of ruby)
+
 ##########################################################################################
+
 #What are some other kinds of queries that are useful? 
+
 
